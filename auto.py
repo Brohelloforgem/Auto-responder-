@@ -31,8 +31,8 @@ class ray1(commands.Cog):
                 numbers.append(autoresponsecount)
             if len(numbers) >= 20:
                 hacker6 = discord.Embed(
-                    title="Arch",
-                    description=f"<:crosss:1212440602659262505>  You can't add more than 20 autoresponses in {ctx.guild.name}",
+                    title="SkyGem",
+                    description=f"<:emoji_11:1239606243564195943>  You can't add more than 20 autoresponses in {ctx.guild.name}",
                     color=0x00FFCA)
                 hacker6.set_author(name=f"{ctx.author}",
                                    icon_url=f"{ctx.author.avatar}")
@@ -42,7 +42,7 @@ class ray1(commands.Cog):
         with open(auto, "w") as f:
             json.dump(autoresponse, f, indent=4)
         embed = discord.Embed(
-                title=f"<:IconTick:1213170250267492383> | Autoresponder `{name}` created successfully.",
+                title=f"<:emoji_10:1239606199465545728> | Autoresponder `{name}` created successfully.",
                 
                 color=0x270136 
             )
@@ -64,7 +64,7 @@ class ray1(commands.Cog):
             with open(auto, "w") as f:
                 json.dump(autoresponse, f, indent=4)
             embed = discord.Embed(
-                title=f"<:IconTick:1213170250267492383> | Autoresponder `{name}` deleted successfully.",
+                title=f"<:emoji_10:1239606199465545728> | Autoresponder `{name}` deleted successfully.",
                 
                 color=0x270136 
             )
@@ -76,7 +76,7 @@ class ray1(commands.Cog):
             
         else:
             embed = discord.Embed(
-                title=f"<:error:1212814863240400946> | No autoresponder found with the name `{name}`.",
+                title=f"<:emoji_12:1239606271301386321> | No autoresponder found with the name `{name}`.",
                 
                 color=0x270136 
             )
@@ -96,9 +96,9 @@ class ray1(commands.Cog):
             embeds = []
 
             for page_num, page_autoresponders in enumerate(paginated_autoresponders, start=1):
-                autoresponders_list = '\n'.join([f"<:curvedline_B:1224397348667527274> **`.{idx + 1}` Trigger  :  {key}**\n**```Value  : {value}```**" for idx, (key, value) in enumerate(page_autoresponders, start=(page_num - 1) * 10)])
+                autoresponders_list = '\n'.join([f"〰️ **`.{idx + 1}` Trigger  :  {key}**\n**```Value  : {value}```**" for idx, (key, value) in enumerate(page_autoresponders, start=(page_num - 1) * 10)])
                 embed = discord.Embed(
-                    title=f"**<:icon_12:1214562796755484744> | Autoresponders for {ctx.guild.name}**",
+                    title=f"**<:emoji_1:1239520863225905214> | Autoresponders for {ctx.guild.name}**",
                     description=autoresponders_list,
                     color=0x270136
                 )
@@ -112,7 +112,7 @@ class ray1(commands.Cog):
             await ctx.send(embed=paginator_view.initial, view=paginator_view)
         else:
             embed4 = discord.Embed(
-                title="<:error:1212814863240400946> | No autoresponders found for this server",
+                title="<:emoji_12:1239606271301386321> | No autoresponders found for this server",
                 color=0x270136
             )
             await ctx.reply(embed=embed4)
@@ -132,7 +132,7 @@ class ray1(commands.Cog):
             await ctx.reply(embed=embed4)
         else:
             embed = discord.Embed(
-                title=f"<:error:1212814863240400946> | No autoresponder found with the name `{name}`.",
+                title=f"<:emoji_12:1239606271301386321> | No autoresponder found with the name `{name}`.",
                 color=0x270136   
             )
             await ctx.reply(embed=embed)
@@ -147,7 +147,7 @@ class ray1(commands.Cog):
         with open(auto, "w") as f:
             json.dump(autoresponse, f, indent=4)
         embed2 = discord.Embed(
-            title="<:IconTick:1213170250267492383> | All autoresponders cleared successfully.",  
+            title="<:emoji_10:1239606199465545728> | All autoresponders cleared successfully.",  
             color=0x270136 
         )
         await ctx.reply(embed=embed2)
@@ -156,13 +156,13 @@ class ray1(commands.Cog):
     async def ar_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions):
             embed3 = discord.Embed(
-                title="<:error:1212814863240400946> | You don't have permission to use this command.",
+                title="<:emoji_12:1239606271301386321> | You don't have permission to use this command.",
                 color=0x270136 
             )
             await ctx.reply(embed=embed3)
 
         elif isinstance(error, commands.MissingRequiredArgument):
-            await ctx.reply("<:error:1212814863240400946> | Please provide a name and a message for the autoresponder.")
+            await ctx.reply("<:emoji_12:1239606271301386321> | Please provide a name and a message for the autoresponder.")
 
     @commands.Cog.listener()
     async def on_message(self, message):
