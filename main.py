@@ -13,7 +13,7 @@ colorama.init(autoreset=True)
 
 status = cycle(['The SkyGem | $help ', 'play.skygem.fun'])
 
-with open('Database/info.json', 'r') as f:
+with open('info.json', 'r') as f:
     Data = json.load(f)
 
 gem = Data['OWNER_IDS']
