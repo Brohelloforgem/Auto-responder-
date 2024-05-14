@@ -8,7 +8,7 @@ import json
 import datetime
 import os
 from discord.ui import View, Button 
-from Extra.np import get_prefix
+from np import get_prefix
 colorama.init(autoreset=True)
 
 status = cycle(['The SkyGem | $help ', 'play.skygem.fun'])
