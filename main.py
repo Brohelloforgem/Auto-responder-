@@ -43,9 +43,9 @@ class Bot(commands.AutoShardedBot):
 
         extensions = [
             "jishaku",
-            "Cogs.afk",
-            "Cogs.leaderboard",
-            "Cogs.role",
+            "np",
+            "auto",
+            "paginator",
             "Cogs.extra",
             "Cogs.owner",
             "Cogs.giveaway",
