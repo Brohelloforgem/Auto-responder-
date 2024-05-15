@@ -5,7 +5,7 @@ from Extra.Tools import *
 from Extra.paginator import PaginatorView
 
 
-auto='/autoresponder.json'
+auto='autoresponder.json'
 
 class ray1(commands.Cog):
     def __init__(self, bot):
